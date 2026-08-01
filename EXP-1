@@ -1,0 +1,16 @@
+# Training Data
+area = [1000, 1500, 800, 1200, 2000]
+bedrooms = [2, 3, 2, 3, 4]
+price = [50, 75, 40, 60, 90]
+
+# Regression coefficients 
+beta0 = 5
+beta1 = 0.03
+beta2 = 5
+print("Regression Equation:")
+print("Price =", beta0, "+", beta1, "* Area +", beta2, "* Bedrooms")
+
+print("\nPredicted Prices:")
+for i in range(len(area)):
+    predicted = beta0 + beta1 * area[i] + beta2 * bedrooms[i]
+    print("House", i+1, ":", predicted)
